@@ -377,9 +377,8 @@ def ensure_numina_cfg(dry_run=False, logger=None):
         if "tool.run" not in config:
             config["tool.run"] = {}
 
-        # ensure the calibrations directory is set to "calibrations" 
-        # under the absolute parent directory of the .numina.cfg file
-        config["tool.run"]["calibsdir"] = f"{cfg_path.absolute().parent}/calibrations"
+        # set calibrations directory
+        config["tool.run"]["calibsdir"] = "calibrations"
 
         # write the updated configuration back to the .numina.cfg file
         with cfg_path.open("w") as f:
