@@ -117,7 +117,7 @@ def main(args=None):
                              "key1,key2,...keyn.'format'")
     parser.add_argument("--geometry",
                         help="tuple x,y,dx,dy",
-                        default="0,0,640,480")
+                        default="640,480,0,0")
     parser.add_argument("--pdffile",
                         help="ouput PDF file name",
                         type=argparse.FileType('w'))
